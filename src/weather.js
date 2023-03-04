@@ -27,4 +27,4 @@ async function processWeatherData(location) {
   }
 }
 
-processWeatherData("Sacramento").then((data) => console.log(data));
+export { processWeatherData };

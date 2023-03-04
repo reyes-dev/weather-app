@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
     weather: "./src/weather.js",
+    form: "./src/form.js",
   },
   devtool: "inline-source-map",
   devServer: {
