@@ -1,3 +1,4 @@
+import "@picocss/pico";
 import "./style.css";
 import { buildForm } from "./form";
 import { processWeatherData } from "./weather";

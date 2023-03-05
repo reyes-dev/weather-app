@@ -1,0 +1,49 @@
+:root {
+  --primary: #f4511e;
+  --primary-hover: #e64a19;
+  --primary-focus: rgba(244, 81, 30, 0.125);
+  --primary-inverse: #FFF;
+}
+form {
+  margin-top: 10%;
+}
+h2 {
+  font-size: 4rem;
+}
+p {
+  margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.grid {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "city city weather"
+    "temp temp misc"
+    "daytime daytime daytime"; 
+}
+.city { grid-area: city; }
+.weather, .misc {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+.weather {grid-area: weather;}
+.temp { 
+  grid-area: temp;
+  display: flex;
+}
+.misc {grid-area: misc;}
+.daytime { grid-area: daytime; }
+.temp > p {
+  font-size: 5rem;
+}
+.temp > p.tempType {
+  font-size: 2.5rem;
+}
