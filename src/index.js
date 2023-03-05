@@ -1,11 +1,13 @@
 import "./style.css";
 import { buildForm } from "./form";
 import { processWeatherData } from "./weather";
-import { displayDataOnPage } from "./display";
+import { displayDataOnPage, clearOldWeatherData } from "./display";
 buildForm();
 const submitBtn = document.querySelector("button");
-const input = document.querySelector("input");
+let input = document.querySelector("input");
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  clearOldWeatherData();
   processWeatherData(input.value).then((data) => displayDataOnPage(data));
+  input.value = "";
 });

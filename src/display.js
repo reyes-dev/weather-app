@@ -25,4 +25,10 @@ function displayDataOnPage(data) {
   );
 }
 
-export { displayDataOnPage };
+function clearOldWeatherData() {
+  if (document.querySelector("div") != null) {
+    document.querySelector("div").remove();
+  }
+}
+
+export { displayDataOnPage, clearOldWeatherData };
